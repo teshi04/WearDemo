@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WearUI</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+
+    <string-array name="menu">
+        <item>BoxInsetLayout</item>
+        <item>CardScrollView</item>
+        <item>CircledImageView</item>
+        <item>CrossfadeDrawable</item>
+        <item>DelayedConfirmationView</item>
+        <item>DismissOverlayView</item>
+        <item>GridViewPager</item>
+        <item>WatchViewStub</item>
+        <item>ConfirmationActivity</item>
+        <item>InsetActivity</item>
+    </string-array>
+</resources>
