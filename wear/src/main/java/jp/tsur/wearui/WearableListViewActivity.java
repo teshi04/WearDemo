@@ -28,6 +28,7 @@ public class WearableListViewActivity extends Activity {
         menuItems.add(new MenuItem("CircularButton", new Intent(this, CircularButtonActivity.class)));
         menuItems.add(new MenuItem("ActionLabel", new Intent(this, ActionLabelActivity.class)));
         menuItems.add(new MenuItem("ConfirmationActivity", new Intent(this, ConfirmationActivityActivity.class)));
+        menuItems.add(new MenuItem("DelayedConfirmationView", new Intent(this, DelayedConfirmationViewActivity.class)));
 
         listView.setAdapter(new Adapter(this, menuItems));
         listView.setClickListener(new WearableListView.ClickListener() {
