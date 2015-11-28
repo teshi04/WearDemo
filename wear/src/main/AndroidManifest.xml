@@ -23,6 +23,7 @@
         <activity android:name=".ActionLabelActivity" />
         <activity android:name=".ConfirmationActivityActivity" />
         <activity android:name=".DelayedConfirmationViewActivity"/>
+        <activity android:name=".CircularImageViewActivity"/>
         <activity android:name="android.support.wearable.activity.ConfirmationActivity" />
     </application>
 
