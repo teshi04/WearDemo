@@ -3,18 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <android.support.wearable.view.DelayedConfirmationView
-        android:id="@+id/delayed_confirmation_view"
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/grey"
+        android:layout_height="wrap_content"
+        android:text="メッセージ" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_close_white_36dp"
-        app:circle_border_color="@color/dark_blue"
-        app:circle_border_width="8dp"
-        app:circle_color="@color/blue"
-        app:circle_padding="4dp"
-        app:circle_radius="40dp" />
+        android:layout_marginTop="4dp"
+        android:text="30億のデバイスで走るジャバ！"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <android.support.wearable.view.DelayedConfirmationView
+            android:id="@+id/delayed_confirmation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_white_36dp"
+            android:layout_gravity="bottom"
+            app:circle_border_color="#90CAF9"
+            app:circle_border_width="8dp"
+            app:circle_color="#2196F3"
+            app:circle_padding="4dp"
+            app:circle_radius="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:layout_marginLeft="4dp"
+            android:text="保存..."
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

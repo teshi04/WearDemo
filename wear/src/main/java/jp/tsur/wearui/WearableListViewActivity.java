@@ -30,6 +30,10 @@ public class WearableListViewActivity extends Activity {
         menuItems.add(new MenuItem("ConfirmationActivity", new Intent(this, ConfirmationActivityActivity.class)));
         menuItems.add(new MenuItem("DelayedConfirmationView", new Intent(this, DelayedConfirmationViewActivity.class)));
         menuItems.add(new MenuItem("CircularImageView", new Intent(this, CircularImageViewActivity.class)));
+        menuItems.add(new MenuItem("CardFrame", new Intent(this, CardFrameActivity.class)));
+        menuItems.add(new MenuItem("ProgressSpinner", new Intent(this, ProgressSpinnerActivity.class)));
+        menuItems.add(new MenuItem("BoxInsetLayout", new Intent(this, BoxInsetLayoutActivity.class)));
+        menuItems.add(new MenuItem("WearableFrameLayout", new Intent(this, WearableFrameLayoutActivity.class)));
 
         listView.setAdapter(new Adapter(this, menuItems));
         listView.setClickListener(new WearableListView.ClickListener() {

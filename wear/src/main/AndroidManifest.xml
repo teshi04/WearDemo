@@ -25,6 +25,10 @@
         <activity android:name=".DelayedConfirmationViewActivity"/>
         <activity android:name=".CircularImageViewActivity"/>
         <activity android:name="android.support.wearable.activity.ConfirmationActivity" />
+        <activity android:name=".CardFrameActivity"/>
+        <activity android:name=".ProgressSpinnerActivity"/>
+        <activity android:name=".BoxInsetLayoutActivity"/>
+        <activity android:name=".WearableFrameLayoutActivity"/>
     </application>
 
 </manifest>
