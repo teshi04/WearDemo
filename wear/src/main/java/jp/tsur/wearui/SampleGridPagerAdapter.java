@@ -11,20 +11,31 @@ import java.util.List;
 
 public class SampleGridPagerAdapter extends FragmentGridPagerAdapter {
 
-    private List<Fragment> rows;
+    private List<String> rows;
 
     public SampleGridPagerAdapter(FragmentManager fm) {
         super(fm);
 
         rows = new ArrayList<>();
-        rows.add(CardFragment.create("タイトル", "テキスト"));
-        rows.add(CardFragment.create("タイトル２", "テキスト２"));
-        rows.add(new CustomCardFragment());
+        rows.add("おはよう");
+        rows.add("こんにちは");
+        rows.add("おやすみ");
     }
 
     @Override
     public Fragment getFragment(int row, int col) {
-        return rows.get(row);
+        String text = rows.get(row);
+
+        switch (col) {
+            case 0:
+                return CardFragment.create("タイトル", text);
+            case 1:
+                return CardFragment.create("タイトル", "2ページ目");
+            case 2:
+                return CardFragment.create("タイトル", "3ページ目");
+            default:
+                return null;
+        }
     }
 
     @Override
@@ -34,6 +45,6 @@ public class SampleGridPagerAdapter extends FragmentGridPagerAdapter {
 
     @Override
     public int getColumnCount(int rowNum) {
-        return 1;
+        return 3;
     }
 }

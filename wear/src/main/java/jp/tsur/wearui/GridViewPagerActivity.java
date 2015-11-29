@@ -15,7 +15,7 @@ public class GridViewPagerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid);
 
-        final GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
+        GridViewPager pager = (GridViewPager) findViewById(R.id.pager);
         pager.setAdapter(new SampleGridPagerAdapter(getFragmentManager()));
 
         DotsPageIndicator indicator = (DotsPageIndicator) findViewById(R.id.indicator);
