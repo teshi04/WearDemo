@@ -34,6 +34,7 @@ public class WearableListViewActivity extends Activity {
         menuItems.add(new MenuItem("ProgressSpinner", new Intent(this, ProgressSpinnerActivity.class)));
         menuItems.add(new MenuItem("BoxInsetLayout", new Intent(this, BoxInsetLayoutActivity.class)));
         menuItems.add(new MenuItem("WearableFrameLayout", new Intent(this, WearableFrameLayoutActivity.class)));
+        menuItems.add(new MenuItem("WatchViewStub", new Intent(this, WatchViewStubActivity.class)));
 
         listView.setAdapter(new Adapter(this, menuItems));
         listView.setClickListener(new WearableListView.ClickListener() {
