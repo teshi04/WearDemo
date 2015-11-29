@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_main);
 
         WearableListView listView = (WearableListView) findViewById(R.id.list);
         final List<MenuItem> menuItems = new ArrayList<>();
@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
         menuItems.add(new MenuItem("BoxInsetLayout", new Intent(this, BoxInsetLayoutActivity.class)));
         menuItems.add(new MenuItem("WearableFrameLayout", new Intent(this, WearableFrameLayoutActivity.class)));
         menuItems.add(new MenuItem("WatchViewStub", new Intent(this, WatchViewStubActivity.class)));
+        menuItems.add(new MenuItem("WearableListView", new Intent(this, WearableListViewActivity.class)));
 
         listView.setAdapter(new Adapter(this, menuItems));
         listView.setClickListener(new WearableListView.ClickListener() {
@@ -54,24 +55,23 @@ public class MainActivity extends Activity {
     private static final class Adapter extends WearableListView.Adapter {
 
         private List<MenuItem> menuItems;
-        private Context context;
+        private LayoutInflater inflater;
 
         private Adapter(Context context, List<MenuItem> data) {
-            this.context = context;
+            inflater = LayoutInflater.from(context);
             menuItems = data;
         }
 
         @Override
         public WearableListView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             return new WearableListView.ViewHolder(
-                    LayoutInflater.from(context).inflate(R.layout.list_item, parent, false));
+                    inflater.inflate(R.layout.list_item, parent, false));
         }
 
         @Override
         public void onBindViewHolder(WearableListView.ViewHolder holder, int position) {
             TextView view = (TextView) holder.itemView.findViewById(R.id.text);
             view.setText(menuItems.get(position).getTitle());
-            holder.itemView.setTag(position);
         }
 
         @Override

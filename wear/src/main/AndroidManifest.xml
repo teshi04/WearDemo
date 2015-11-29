@@ -30,6 +30,7 @@
         <activity android:name=".BoxInsetLayoutActivity" />
         <activity android:name=".WearableFrameLayoutActivity" />
         <activity android:name=".WatchViewStubActivity" />
+        <activity android:name=".WearableListViewActivity" />
     </application>
 
 </manifest>
