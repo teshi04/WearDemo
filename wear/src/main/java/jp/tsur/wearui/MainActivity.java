@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
 
         WearableListView listView = (WearableListView) findViewById(R.id.list);
         final List<MenuItem> menuItems = new ArrayList<>();
+        menuItems.add(new MenuItem("GridViewPager", new Intent(this, GridViewPagerActivity.class)));
         menuItems.add(new MenuItem("CircularButton", new Intent(this, CircularButtonActivity.class)));
         menuItems.add(new MenuItem("ActionLabel", new Intent(this, ActionLabelActivity.class)));
         menuItems.add(new MenuItem("ConfirmationActivity", new Intent(this, ConfirmationActivityActivity.class)));
